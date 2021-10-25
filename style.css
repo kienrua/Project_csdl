@@ -1,0 +1,207 @@
+body {
+    background-image: url('../image/background_shopee.jpg');
+    background-size: cover;
+}
+
+.container {}
+
+.first-container {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background-color: orangered;
+    justify-content: space-around;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+ul li>a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+    border-right: thin solid white;
+}
+
+.connection::after {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f082";
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 0;
+    margin-top: 6px;
+    padding: 0 3px;
+}
+
+
+/* liên quan đến thông báo*/
+
+.notification::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f0f3";
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 37px;
+    margin-top: 6px;
+}
+
+.notification::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    left: 20%;
+    visibility: hidden;
+}
+
+.note {
+    background-image: url('../image/vodanh.jfif');
+    background-size: cover;
+    width: 50%;
+    height: 200px;
+    margin: 5px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    transition: 0.2s;
+    border: 1px solid black;
+}
+
+.note1 p {
+    padding-top: 20%;
+    padding-left: 5px;
+}
+
+.note1 {
+    height: 70%;
+    align-content: center;
+    justify-content: center;
+}
+
+.note-login {
+    height: 30%;
+    display: block;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+.note-login>a {
+    text-decoration: none;
+    padding: 0 30px;
+    top: 0;
+    border-right: 1px solid black;
+}
+
+.note-login {
+    display: flex;
+    flex-direction: row;
+}
+
+.notification:hover::after,
+.notification:hover .note {
+    visibility: visible;
+}
+
+
+/**/
+
+.question::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f059";
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 150px;
+    margin-top: 6px;
+    padding: 0 3px;
+}
+
+
+/* boder khi hover*/
+
+ul li a {
+    position: relative;
+}
+
+ul li>a::before {
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+ul li:hover a::before {
+    width: 100%;
+}
+
+
+/* second */
+
+.second-container {
+    left: 100px;
+    height: 200px;
+    width: 800px;
+}
+
+
+/*body*/
+
+.body-container {
+    left: 100px;
+    height: 400px;
+    width: 80%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    position: absolute;
+}
+
+.slide-controls {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+#next-btn,
+#prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 40px;
+    border: none;
+    color: white;
+}
